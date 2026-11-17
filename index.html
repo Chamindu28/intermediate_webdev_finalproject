@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate simple interest and total repayment instantly with our free Interest Rate Calculator. Enter principal, annual interest rate, and time in years.">
+  <meta name="theme-color" content="#143b60">
+  <title>Interest Rate Calculator | Simple Interest &amp; Total Amount</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main class="calculator" aria-labelledby="page-title">
+    <div class="eyebrow">FINANCIAL TOOL</div>
+    <h1 id="page-title">Interest Rate Calculator</h1>
+    <p class="intro">Calculate simple interest and your total amount in seconds.</p>
+    <form id="interest-form" novalidate>
+      <label for="principal">Principal amount</label>
+      <input id="principal" name="principal" type="number" min="0" step="any" value="10000" required>
+      <label for="rate">Annual interest rate (%)</label>
+      <input id="rate" name="rate" type="number" min="0" step="any" value="5" required>
+      <label for="time">Time (years)</label>
+      <input id="time" name="time" type="number" min="0" step="any" value="2" required>
+      <button type="submit">Calculate Interest</button>
+    </form>
+    <p id="error" class="error" role="alert" hidden></p>
+    <section id="result" class="result" aria-live="polite" aria-label="Calculation results">
+      <div><span>Simple interest</span><strong id="interest-output">1,000.00</strong></div>
+      <div><span>Total amount</span><strong id="total-output">11,000.00</strong></div>
+    </section>
+    <p class="formula">Formula: Interest = Principal × Rate × Time ÷ 100</p>
+  </main>
+</body>
+</html>
